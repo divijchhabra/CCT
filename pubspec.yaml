@@ -30,7 +30,7 @@ dependencies:
   flutter_insta: ^1.0.0
   insta_public_api: ^0.1.2
   url_launcher: ^6.0.17
-  firebase_app_check: ^0.0.6+3
+
 
 dev_dependencies:
   flutter_test:

@@ -19,8 +19,9 @@ class _HomeLockedFullyState extends State<HomeLockedFully> {
       backgroundColor: screen_color,
       body: Padding(
         padding:  EdgeInsets.only(top: top_margin, left: 20, right: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          physics: ClampingScrollPhysics(),
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

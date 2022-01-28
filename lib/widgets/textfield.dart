@@ -9,6 +9,7 @@ TextField textfield(
     TextAlign textALign =TextAlign.start}) {
   return TextField(
     textAlign: textALign,
+    textCapitalization: hint_text == 'XXXX-XXXX-XXXX-XXXX' ?  TextCapitalization.characters: TextCapitalization.none,
     cursorColor: Colors.black,
     onChanged: (val) {},
     decoration: InputDecoration(

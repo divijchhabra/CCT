@@ -5,16 +5,11 @@ import 'package:vuitton_club/Admin_Panel/Home_Admin.dart';
 import 'package:vuitton_club/Networking/rolodex_individual.dart';
 
 import 'package:vuitton_club/Onboarding/splash.dart';
-import 'package:firebase_app_check/firebase_app_check.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  await FirebaseAppCheck.instance
-  // Your personal reCaptcha public key goes here:
-      .activate(
 
-  );
   runApp(MyApp());
 }
 

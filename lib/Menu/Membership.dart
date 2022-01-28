@@ -129,11 +129,10 @@ class _MembershipState extends State<Membership> {
                   Container(
                     alignment: Alignment.center,
                     child: button(
-                      onPressed: () {
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(builder: (context) => Home()),
-                            (route) => false);
+                      onPressed: () async  {
+                        String _url = 'https://dashboard.thevuittonclub.com';
+                        if (!await launch(_url)) throw 'Could not launch $_url';
+
                       },
                       child: Text("GO TO DASHBOARD"),
 
@@ -146,12 +145,12 @@ class _MembershipState extends State<Membership> {
                   Container(
                     alignment: Alignment.center,
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(builder: (context) => Rolodex()),
-                        );
+                      onPressed: () async  {
+                        String _url = 'https://discord.com/invite/dzpZQyq7Dt';
+                        if (!await launch(_url)) throw 'Could not launch $_url';
+
                       },
+
                       child: Text("GO TO COMMUNITY"),
 
                       // ignore: prefer_const_constructors

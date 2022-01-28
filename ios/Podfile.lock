@@ -353,9 +353,6 @@ PODS:
     - Reachability
   - device_info (0.0.1):
     - Flutter
-  - Firebase/AppCheck (8.9.0):
-    - Firebase/CoreOnly
-    - FirebaseAppCheck (~> 8.9.0-beta)
   - Firebase/Auth (8.9.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 8.9.0)
@@ -364,11 +361,6 @@ PODS:
   - Firebase/Firestore (8.9.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 8.9.0)
-  - firebase_app_check (0.0.6-3):
-    - Firebase/AppCheck (~> 8.9.0)
-    - Firebase/CoreOnly (~> 8.9.0)
-    - firebase_core
-    - Flutter
   - firebase_auth (3.3.4):
     - Firebase/Auth (= 8.9.0)
     - firebase_core
@@ -376,10 +368,6 @@ PODS:
   - firebase_core (1.10.6):
     - Firebase/CoreOnly (= 8.9.0)
     - Flutter
-  - FirebaseAppCheck (8.9.0-beta):
-    - FirebaseCore (~> 8.0)
-    - GoogleUtilities/Environment (~> 7.6)
-    - PromisesObjC (< 3.0, >= 1.2)
   - FirebaseAuth (8.9.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
@@ -471,7 +459,6 @@ DEPENDENCIES:
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
   - connectivity (from `.symlinks/plugins/connectivity/ios`)
   - device_info (from `.symlinks/plugins/device_info/ios`)
-  - firebase_app_check (from `.symlinks/plugins/firebase_app_check/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
@@ -484,7 +471,6 @@ SPEC REPOS:
     - abseil
     - BoringSSL-GRPC
     - Firebase
-    - FirebaseAppCheck
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
@@ -506,8 +492,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/connectivity/ios"
   device_info:
     :path: ".symlinks/plugins/device_info/ios"
-  firebase_app_check:
-    :path: ".symlinks/plugins/firebase_app_check/ios"
   firebase_auth:
     :path: ".symlinks/plugins/firebase_auth/ios"
   firebase_core:
@@ -528,10 +512,8 @@ SPEC CHECKSUMS:
   connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
   device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
   Firebase: 13d8d96499e2635428d5bf0ec675df21f95d9a95
-  firebase_app_check: 83c63d94a5e5f8880ddcbb0909da8829f7d8f54e
   firebase_auth: e875a50b81aefb20f305dfede425647e9675c19e
   firebase_core: c263d7daf1dc92fcd9895e6abdc04872b0ee07ff
-  FirebaseAppCheck: eb4c5c6984804b728f71ae89711455dcf6a21054
   FirebaseAuth: 2b78b2a32c07b3ecfa4970bdf1d3632b8304099b
   FirebaseCore: 599ee609343eaf4941bd188f85e3aa077ffe325b
   FirebaseCoreDiagnostics: 5daa63f1c1409d981a2d5007daa100b36eac6a34

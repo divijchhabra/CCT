@@ -151,15 +151,8 @@ class _SplashPageState extends State<SplashPage> {
 
     }
     else{
-
       checkLicenseDetails(key);
-
     }
-
-
-
-
-
   }
 
   Future isLoggedIn() async {
@@ -209,6 +202,8 @@ class _SplashPageState extends State<SplashPage> {
             alignment: Alignment.center,
             child: button(
               onPressed: () async {
+
+
                 if (user != null) {
 
                   setState(() {

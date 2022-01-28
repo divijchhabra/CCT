@@ -183,7 +183,8 @@ class _RolodexAdminMainState extends State<RolodexAdminMain> {
                                                 _snap, index, searchField)) ==
                                             false
                                         ? SizedBox(height: 0)
-                                        : Column(
+                                        :  _snap[index]['License']
+                                    ['Key'] != "" ? Column(
                                             children: [
                                               item(
                                                 s1: _snap[index]['Info']
@@ -203,7 +204,7 @@ class _RolodexAdminMainState extends State<RolodexAdminMain> {
                                               ),
                                               SizedBox(height: 10),
                                             ],
-                                          );
+                                          ) : Container();
                                   },
                                 );
                         }),

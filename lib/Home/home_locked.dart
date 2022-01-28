@@ -21,23 +21,29 @@ class _HomeLockedState extends State<HomeLocked> {
     return Scaffold(
       backgroundColor: screen_color,
       body: Container(
+
     margin: EdgeInsets.only(top: top_margin, left: 20, right: 20),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    child: ListView(
+      padding: EdgeInsets.zero,
+      physics: ClampingScrollPhysics(),
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+
             InkWell(
               onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Menu())),
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Menu())),
               child: Icon(
                 Icons.sort,
                 size: 40,
               ),
             ),
-            
+
             Container(
-              width: double.infinity,
+
               child: Center(
                 child: Text(
                   "VUITTON CLUB",
@@ -45,6 +51,8 @@ class _HomeLockedState extends State<HomeLocked> {
                 ),
               ),
             ),
+
+             Center(),
           ],
         ),
         SizedBox(height: 20),
@@ -115,26 +123,26 @@ class _HomeLockedState extends State<HomeLocked> {
               itemBox(
                 s1: "Plane",
                 s2: "Charter",
-                
+
                     iconData:
                   "assets/images/lock.png",
-                 
+
               ),
               itemBox(
                 s1: "Luxury",
                 s2: "Goods",
-               
-                    iconData: 
+
+                    iconData:
                   "assets/images/lock.png",
-                  
+
               ),
               itemBox(
                   s1: "Car",
                   s2: "Rental",
-                  
-                      iconData: 
+
+                      iconData:
                     "assets/images/lock.png",
-                   
+
                  ),
             ],
           ),
@@ -156,19 +164,19 @@ class _HomeLockedState extends State<HomeLocked> {
                 child: itemBox(
                   s1: "Club",
                   s2: "Rolodex",
-                 
-                      iconData: 
+
+                      iconData:
                     "assets/images/card.png",
-                    
+
                 ),
               ),
               itemBox(
                 s1: "Repost",
                 s2: "Request",
-               
-                    iconData: 
+
+                    iconData:
                   "assets/images/lock.png",
-                  
+
               ),
               InkWell(
                 onTap: () => Navigator.push(
@@ -178,12 +186,12 @@ class _HomeLockedState extends State<HomeLocked> {
                 child: itemBox(
                   s1: "Events",
                   s2: "",
-                  
-                      iconData: 
+
+                      iconData:
                     "assets/images/cal.png",
                     ),
                 ),
-             
+
             ],
           ),
         ),

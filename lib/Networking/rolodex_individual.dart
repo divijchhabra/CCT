@@ -7,6 +7,7 @@ import 'package:insta_public_api/insta_public_api.dart';
 import 'package:vuitton_club/Home/home.dart';
 import 'package:vuitton_club/Services/user_details.dart';
 import 'package:vuitton_club/contants.dart';
+import 'package:vuitton_club/Home/home_locked.dart';
 
 class RolodexIndividual extends StatefulWidget {
   const RolodexIndividual({Key? key, this.array, this.index}) : super(key: key);
@@ -53,10 +54,17 @@ class _RolodexIndividualState extends State<RolodexIndividual> {
                     ),
                     Container(
                       child: InkWell(
-                        onTap: () => Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(builder: (context) => Home()),
-                            (route) => false),
+                        onTap: () {
+                          UserDetails.license_data!['plan']['name'].contains('Social') == true ?
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(builder: (context) => Home()),
+                                  (route) => false) :  Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(builder: (context) => HomeLocked()),
+                                  (route) => false);
+
+                        },
                         child: Icon(
                           Icons.close_outlined,
                           size: 50,

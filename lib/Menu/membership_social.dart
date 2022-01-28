@@ -7,7 +7,7 @@ import 'package:vuitton_club/Onboarding/license_key.dart';
 import 'package:vuitton_club/Services/user_details.dart';
 import 'package:vuitton_club/widgets/button_widget.dart';
 import 'package:vuitton_club/contants.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class MembershipSocial extends StatefulWidget {
   const MembershipSocial({Key? key}) : super(key: key);
 
@@ -129,11 +129,10 @@ class _MembershipSocialState extends State<MembershipSocial> {
                   Container(
                     alignment: Alignment.center,
                     child: button(
-                      onPressed: () {
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(builder: (context) => Home()),
-                            (route) => false);
+                      onPressed: () async {
+                        String _url = 'https://dashboard.thevuittonclub.com';
+                        if (!await launch(_url)) throw 'Could not launch $_url';
+
                       },
                       child: Text("GO TO DASHBOARD"),
 
@@ -146,11 +145,10 @@ class _MembershipSocialState extends State<MembershipSocial> {
                   Container(
                     alignment: Alignment.center,
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(builder: (context) => Rolodex()),
-                        );
+                      onPressed: () async  {
+                        String _url = 'https://discord.com/invite/dzpZQyq7Dt';
+                          if (!await launch(_url)) throw 'Could not launch $_url';
+
                       },
                       child: Text("GO TO COMMUNITY"),
 

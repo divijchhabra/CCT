@@ -33,8 +33,9 @@ class _HomeState extends State<Home> {
             backgroundColor: screen_color,
             body: Container(
               margin: EdgeInsets.only(top: top_margin, left: 20, right: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: ListView(
+                padding: EdgeInsets.zero,
+                physics: ClampingScrollPhysics(),
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
